@@ -1,0 +1,11 @@
+{
+  "name": "fan-clube-juca",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sass": "sass src/styles.scss src/styles.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

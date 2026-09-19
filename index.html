@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fã Nº 1 do Juca!!!</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+  <!-- Efeito antigo de fundo -->
+  <div class="stars"></div>
+
+  <div class="site">
+
+    <header class="hero">
+      <div class="blink">★ ★ ★ SITE OFICIAL ★ ★ ★</div>
+      <h1>🏆 FÃ Nº 1 DO JUCA 🏆</h1>
+      <p class="subtitle">O maior fã que o Juca poderia ter!!!</p>
+
+      <div class="marquee">
+        <span>🔥 ATENÇÃO!!! VOCÊ ESTÁ NO SITE OFICIAL DO MAIOR FÃ DO JUCA!!! 🔥</span>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="profile">
+        <div class="section-title">★★★ CONHEÇA O FÃ ★★★</div>
+
+        <div class="profile-content">
+          <div class="photo-frame">
+            <div class="photo-label">FÃ VERIFICADO ✔</div>
+            <img src="assets/juca-fan.jpg" alt="Foto do fã do Juca">
+            <div class="photo-caption">O homem. A lenda. O fã.</div>
+          </div>
+
+          <div class="profile-text">
+            <h2>ELE É O FÃ Nº 1 DO JUCA!</h2>
+            <p>
+              Alguns acompanham o Juca.<br>
+              Alguns admiram o Juca.<br>
+              <strong>Ele vive pelo Juca.</strong>
+            </p>
+
+            <div class="counter-box">
+              <span>VISITANTE Nº</span>
+              <strong id="visitorCounter">00001337</strong>
+            </div>
+
+            <p class="small-text">
+              Este site é melhor visualizado em<br>
+              Internet Explorer 6.0 • 800x600
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scoreboard">
+        <div class="section-title">🔥 PLACARES OFICIAIS 🔥</div>
+
+        <div class="scores">
+          <article class="score-card">
+            <div class="sport-icon">🎱</div>
+            <h3>SINUCA</h3>
+            <div class="score">3 <span>x</span> 1</div>
+            <p>Vitória do Juca</p>
+            <button onclick="openPopup('poolPopup')">VER DETALHES</button>
+          </article>
+
+          <article class="score-card">
+            <div class="sport-icon">🎳</div>
+            <h3>BOLICHE</h3>
+            <div class="score">1 <span>x</span> 0</div>
+            <p>Vitória do Juca</p>
+            <button onclick="openPopup('bowlingPopup')">VER DETALHES</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="section-title">💬 DEPOIMENTOS DOS FÃS 💬</div>
+
+        <div class="carousel">
+          <button class="carousel-btn prev" onclick="previousTestimonial()">◀</button>
+
+          <div class="testimonial">
+            <div class="quote">"</div>
+            <p id="testimonialText">
+              Eu nunca vi alguém acompanhar tanto o Juca.
+            </p>
+            <strong id="testimonialAuthor">— João, fã desde 2004</strong>
+          </div>
+
+          <button class="carousel-btn next" onclick="nextTestimonial()">▶</button>
+        </div>
+
+        <div class="dots" id="testimonialDots"></div>
+      </section>
+
+      <section class="reasons">
+        <div class="section-title">⭐ POR QUE ELE É O FÃ Nº 1? ⭐</div>
+
+        <div class="reason-grid">
+          <div class="reason">🏆<strong>Motivo #1</strong><span>Conhece todas as histórias do Juca.</span></div>
+          <div class="reason">🎱<strong>Motivo #2</strong><span>Está sempre acompanhando os placares.</span></div>
+          <div class="reason">🎳<strong>Motivo #3</strong><span>Torce até no boliche.</span></div>
+          <div class="reason">❤️<strong>Motivo #4</strong><span>Admiração totalmente desproporcional.</span></div>
+        </div>
+      </section>
+
+      <section class="guestbook">
+        <div class="section-title">📖 LIVRO DE VISITAS 📖</div>
+        <p>Deixe seu depoimento sobre o maior fã do Juca!</p>
+
+        <div class="fake-form">
+          <input type="text" placeholder="Seu nome">
+          <textarea placeholder="Escreva seu depoimento..."></textarea>
+          <button onclick="submitGuestbook()">ASSINAR LIVRO DE VISITAS!!!</button>
+        </div>
+
+        <p id="guestbookMessage" class="hidden"></p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>★ © 2004 FÃ CLUBE OFICIAL DO JUCA ★</div>
+      <div>Site criado com HTML + SCSS + JavaScript</div>
+      <div class="blink">BEST VIEWED WITH INTERNET EXPLORER</div>
+    </footer>
+
+  </div>
+
+  <!-- POPUP SINUCA -->
+  <div class="popup-overlay" id="poolPopup">
+    <div class="popup">
+      <div class="popup-header">
+        <span>🎱 PLACAR DA SINUCA</span>
+        <button onclick="closePopup('poolPopup')">X</button>
+      </div>
+      <div class="popup-body">
+        <h2>JUCA 3 x 1 ADVERSÁRIO</h2>
+        <p>O domínio do Juca continua absoluto!</p>
+        <div class="big-score">3 - 1</div>
+        <p>🏆 MAIS UMA VITÓRIA PARA A HISTÓRIA!</p>
+      </div>
+      <button class="popup-ok" onclick="closePopup('poolPopup')">OK!!!</button>
+    </div>
+  </div>
+
+  <!-- POPUP BOLICHE -->
+  <div class="popup-overlay" id="bowlingPopup">
+    <div class="popup">
+      <div class="popup-header">
+        <span>🎳 PLACAR DO BOLICHE</span>
+        <button onclick="closePopup('bowlingPopup')">X</button>
+      </div>
+      <div class="popup-body">
+        <h2>JUCA 1 x 0 ADVERSÁRIO</h2>
+        <p>Mais uma modalidade dominada pelo Juca.</p>
+        <div class="big-score">1 - 0</div>
+        <p>🎳 STRIKE DE RESPEITO!</p>
+      </div>
+      <button class="popup-ok" onclick="closePopup('bowlingPopup')">OK!!!</button>
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
